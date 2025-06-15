@@ -3,7 +3,6 @@ import Logo from "../assets/logo.svg";
 import CartIcon from "../assets/cart.svg";
 import UserIcon from "../assets/user.svg";
 
-
 export default function Navbar() {
   return (
     <header className="relative w-full px-20 mt-8">
@@ -31,24 +30,24 @@ export default function Navbar() {
         </nav>
 
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            <NavLink to="/" className="flex items-center">
+          <NavLink to="/" className="flex items-center">
             <img src={Logo} alt="Logo" className="h-10 w-auto" />
-            </NavLink>
+          </NavLink>
         </div>
 
-        <div className="flex gap-x-6 ml-auto items-center mr-8">
-            <button
-                className="flex items-center justify-center h-15 w-15 rounded-full bg-white border border-black shadow hover:opacity-80 transition"
-                aria-label="Carrinho"
-                >
-                <img src={CartIcon} alt="Carrinho" className="h-5 w-5" />
-                </button>
-            <button
-                className="flex items-center justify-center h-15 w-15 rounded-full bg-black shadow hover:opacity-80 transition"
-                aria-label="Usuário"
-                >
-                <img src={UserIcon} alt="Usuário" className="h-5 w-5" />
-            </button>
+        <div className="flex gap-x-6 ml-auto items-center">
+          <button
+            className="flex items-center justify-center h-15 w-15 rounded-full bg-white border border-black shadow hover:opacity-80 transition"
+            aria-label="Carrinho"
+          >
+            <img src={CartIcon} alt="Carrinho" className="h-5 w-5" />
+          </button>
+          <button
+            className="flex items-center justify-center h-15 w-15 rounded-full bg-black shadow hover:opacity-80 transition"
+            aria-label="Usuário"
+          >
+            <img src={UserIcon} alt="Usuário" className="h-5 w-5" />
+          </button>
         </div>
       </div>
     </header>
