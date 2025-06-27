@@ -1,0 +1,6 @@
+C:\Projetos Programação\facul-undf\Ecommerce\Ecommerce.API\obj\Debug\net8.0\Ecommerce.API.csproj.AssemblyReference.cache
+C:\Projetos Programação\facul-undf\Ecommerce\Ecommerce.API\obj\Debug\net8.0\Ecommerce.API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos Programação\facul-undf\Ecommerce\Ecommerce.API\obj\Debug\net8.0\Ecommerce.API.AssemblyInfoInputs.cache
+C:\Projetos Programação\facul-undf\Ecommerce\Ecommerce.API\obj\Debug\net8.0\Ecommerce.API.AssemblyInfo.cs
+C:\Projetos Programação\facul-undf\Ecommerce\Ecommerce.API\obj\Debug\net8.0\Ecommerce.API.csproj.CoreCompileInputs.cache
+C:\Projetos Programação\facul-undf\Ecommerce\Ecommerce.API\obj\Debug\net8.0\Ecommerce.API.MvcApplicationPartsAssemblyInfo.cache

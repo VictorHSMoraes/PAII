@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Ecommerce.Domain",
+    "\\Ecommerce.Domain\\Interfaces",
+    "\\Ecommerce.Domain\\Interfaces\\Repositories",
+    "\\Ecommerce.Domain\\Interfaces\\Services",
+    "\\Ecommerce.Domain\\Services",
+    "\\Ecommerce.Domain\\Settings",
+    "\\Ecommerce.Infrastructure",
+    "\\Ecommerce.Infrastructure\\Data",
+    "\\Ecommerce.Infrastructure\\Repositories"
+  ],
+  "SelectedNode": "\\Ecommerce.Domain\\Services\\CartService.cs",
+  "PreviewInSolutionExplorer": false
+}
