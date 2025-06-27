@@ -32,7 +32,7 @@ function Layout(_a) {
 }
 exports.Layout = Layout;
 function App() {
-    return (React.createElement("div", null,
+    return (React.createElement("div", { className: "" },
         React.createElement(navbar_1["default"], null),
         React.createElement(react_router_1.Outlet, null),
         React.createElement(footer_1["default"], null)));

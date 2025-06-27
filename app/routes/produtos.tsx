@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-import SearchIcon from "../assets/search.svg";
 
 interface FilterState {
   tamanhos: string[];
@@ -32,91 +31,82 @@ const products = [
     id: 1,
     name: "Básica Slim Fit",
     category: "Algodão",
-    price: "R$ 199",
+    price: "199",
     image:
       "https://static.zara.net/assets/public/3fd9/de20/7f134ddf8484/575002ad8c33/06224436800-a1/06224436800-a1.jpg",
     color: "#F5F5DC",
-    link: "/produtos/1",
   },
   {
     id: 2,
     name: "Básica",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/da46/1eb1/c81a4f2fb010/fe6e9ea44f14/03665417251-000-a1/03665417251-000-a1.jpg?ts=1746777657706&w=1500",
     color: "#000000",
-    link: "/produtos/2",
   },
   {
     id: 3,
     name: "Camisa",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/da70/5cae/120e499e9931/fbcdd193e431/06462307800-a1/06462307800-a1.jpg?ts=1732117538502&w=1500",
     color: "#2F4F4F",
-    link: "/produtos/3",
   },
   {
     id: 4,
     name: "Básica Slim Fit",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/3fd9/de20/7f134ddf8484/575002ad8c33/06224436800-a1/06224436800-a1.jpg",
     color: "#8B4513",
-    link: "/produtos/4",
   },
   {
     id: 5,
     name: "Básica",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/da46/1eb1/c81a4f2fb010/fe6e9ea44f14/03665417251-000-a1/03665417251-000-a1.jpg?ts=1746777657706&w=1500",
     color: "#000000",
-    link: "/produtos/5",
   },
   {
     id: 6,
     name: "Camisa",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/da70/5cae/120e499e9931/fbcdd193e431/06462307800-a1/06462307800-a1.jpg?ts=1732117538502&w=1500",
     color: "#87CEEB",
-    link: "/produtos/6",
   },
   {
     id: 7,
     name: "Básica Slim Fit",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/3fd9/de20/7f134ddf8484/575002ad8c33/06224436800-a1/06224436800-a1.jpg",
     color: "#F5F5DC",
-    link: "/produtos/7",
   },
   {
     id: 8,
     name: "Básica",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/da46/1eb1/c81a4f2fb010/fe6e9ea44f14/03665417251-000-a1/03665417251-000-a1.jpg?ts=1746777657706&w=1500",
     color: "#000000",
-    link: "/produtos/8",
   },
   {
     id: 9,
     name: "Camisa",
     category: "Algodão",
-    price: "R$ 199",
+    price: 199,
     image:
       "https://static.zara.net/assets/public/da70/5cae/120e499e9931/fbcdd193e431/06462307800-a1/06462307800-a1.jpg?ts=1732117538502&w=1500",
     color: "#2F4F4F",
-    link: "/produtos/9",
   },
 ];
 
@@ -180,13 +170,12 @@ export default function Produtos() {
   };
 
   return (
-    <div>
-      {/* Layout principal com filtro lateral e conteúdo */}
-      
+    <div className="bg-[url('/assets/grain-texture.png')]">
+
       <div className="flex min-h-screen">
         {/* Filtro Lateral */}
-        <aside className="fixed top-65 left-0 h-screen overflow-y-auto w-80 bg-white border-r border-gray-200 p-6 z-40">
-          <div className="space-y-8">
+        <aside className="w-64 md:w-72 lg:w-80 p-15 mt-30 h-screen overflow-y-auto border-gray-200">
+          <div className="space-y-5">
             {/* Título */}
             <h2 className="text-2xl font-bold text-black">Filtros</h2>
 
@@ -210,10 +199,8 @@ export default function Produtos() {
               </div>
             </div>
 
-            {/* Linha separadora */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Avaliados */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("avaliados")}
@@ -263,10 +250,8 @@ export default function Produtos() {
               )}
             </div>
 
-            {/* Outras seções do filtro */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Categoria */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("categoria")}
@@ -291,10 +276,8 @@ export default function Produtos() {
               </button>
             </div>
 
-            {/* Linha separadora */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Cores */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("cores")}
@@ -319,10 +302,8 @@ export default function Produtos() {
               </button>
             </div>
 
-            {/* Linha separadora */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Preço */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("preco")}
@@ -347,10 +328,8 @@ export default function Produtos() {
               </button>
             </div>
 
-            {/* Linha separadora */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Coleção */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("colecao")}
@@ -375,10 +354,8 @@ export default function Produtos() {
               </button>
             </div>
 
-            {/* Linha separadora */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Tags */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("tags")}
@@ -403,10 +380,8 @@ export default function Produtos() {
               </button>
             </div>
 
-            {/* Linha separadora */}
             <div className="border-t border-gray-200"></div>
 
-            {/* Avaliações */}
             <div className="space-y-4">
               <button
                 onClick={() => toggleSection("avaliacoes")}
@@ -433,10 +408,8 @@ export default function Produtos() {
           </div>
         </aside>
 
-        {/* Conteúdo Principal */}
-        <main className="flex-1 p-8">
+        <main className="flex-1 p-8 flex justify-center">
           <div className="max-w-6xl mx-auto">
-            {/* Breadcrumb */}
             <nav className="text-sm text-gray-600 mb-6">
               <NavLink to="/" className="hover:text-black">
                 Início
@@ -445,16 +418,13 @@ export default function Produtos() {
               <span className="text-black">Produtos</span>
             </nav>
 
-            {/* Título */}
             <h1 className="text-4xl font-bold text-black mb-8">PRODUTOS</h1>
 
-            {/* Barra de pesquisa E Filtros de categoria na mesma linha */}
             <div className="flex items-center gap-6 mb-12">
-              {/* Barra de pesquisa - lado esquerdo */}
               <div className="flex-shrink-0">
                 <div className="flex items-center bg-gray-200 rounded-sm h-12 w-80 px-4">
                   <img
-                    src={SearchIcon}
+                    src="/assets/search.svg"
                     alt="Pesquisar"
                     className="h-5 w-5 mr-3 opacity-70"
                   />
@@ -468,7 +438,6 @@ export default function Produtos() {
                 </div>
               </div>
 
-              {/* Filtros de categoria - lado direito */}
               <div className="flex-1">
                 <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4">
                   {categoryFilters.map((filter) => (
@@ -488,16 +457,14 @@ export default function Produtos() {
               </div>
             </div>
 
-            {/* Grid de produtos 3x3 */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-30">
               {products.map((product) => (
                 <NavLink
                   key={product.id}
-                  to={product.link}
-                  className="group block bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                  to={`/produtos/${product.id}`}
+                  className="group block overflow-hidden hover:shadow-lg transition-shadow duration-300"
                 >
-                  {/* Container da imagem */}
-                  <div className="aspect-[3/4] bg-gray-100 overflow-hidden">
+                  <div className="aspect-[3/4] overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -505,29 +472,24 @@ export default function Produtos() {
                     />
                   </div>
 
-                  {/* Informações do produto */}
                   <div className="p-4 space-y-2">
-                    {/* Categoria e indicador de cor */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-x-2">
                       <span className="text-sm text-gray-500 font-medium">
                         {product.category}
                       </span>
                       <div
-                        className="w-4 h-4 rounded-full border border-gray-300"
+                        className="w-4 h-4 border border-gray-300"
                         style={{ backgroundColor: product.color }}
                         aria-label="Cor disponível"
                       />
                     </div>
 
-                    {/* Nome do produto */}
-                    <h3 className="text-lg font-semibold text-black group-hover:text-gray-700 transition-colors">
-                      {product.name}
-                    </h3>
-
-                    {/* Preço */}
-                    <p className="text-xl font-bold text-black">
-                      {product.price}
-                    </p>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-sm font-medium text-black group-hover:text-gray-700 transition-colors">
+                        {product.name}
+                      </h3>
+                      <p>R$ {product.price}</p>
+                    </div>
                   </div>
                 </NavLink>
               ))}

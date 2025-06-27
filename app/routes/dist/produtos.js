@@ -20,7 +20,6 @@ var __spreadArrays = (this && this.__spreadArrays) || function () {
 exports.__esModule = true;
 var react_1 = require("react");
 var react_router_1 = require("react-router");
-var search_svg_1 = require("../assets/search.svg");
 var categoryFilters = [
     { id: "novo", label: "NOVO", active: false },
     { id: "populares", label: "POPULARES", active: false },
@@ -38,82 +37,73 @@ var products = [
         id: 1,
         name: "Básica Slim Fit",
         category: "Algodão",
-        price: "R$ 199",
+        price: "199",
         image: "https://static.zara.net/assets/public/3fd9/de20/7f134ddf8484/575002ad8c33/06224436800-a1/06224436800-a1.jpg",
-        color: "#F5F5DC",
-        link: "/produtos/1"
+        color: "#F5F5DC"
     },
     {
         id: 2,
         name: "Básica",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/da46/1eb1/c81a4f2fb010/fe6e9ea44f14/03665417251-000-a1/03665417251-000-a1.jpg?ts=1746777657706&w=1500",
-        color: "#000000",
-        link: "/produtos/2"
+        color: "#000000"
     },
     {
         id: 3,
         name: "Camisa",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/da70/5cae/120e499e9931/fbcdd193e431/06462307800-a1/06462307800-a1.jpg?ts=1732117538502&w=1500",
-        color: "#2F4F4F",
-        link: "/produtos/3"
+        color: "#2F4F4F"
     },
     {
         id: 4,
         name: "Básica Slim Fit",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/3fd9/de20/7f134ddf8484/575002ad8c33/06224436800-a1/06224436800-a1.jpg",
-        color: "#8B4513",
-        link: "/produtos/4"
+        color: "#8B4513"
     },
     {
         id: 5,
         name: "Básica",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/da46/1eb1/c81a4f2fb010/fe6e9ea44f14/03665417251-000-a1/03665417251-000-a1.jpg?ts=1746777657706&w=1500",
-        color: "#000000",
-        link: "/produtos/5"
+        color: "#000000"
     },
     {
         id: 6,
         name: "Camisa",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/da70/5cae/120e499e9931/fbcdd193e431/06462307800-a1/06462307800-a1.jpg?ts=1732117538502&w=1500",
-        color: "#87CEEB",
-        link: "/produtos/6"
+        color: "#87CEEB"
     },
     {
         id: 7,
         name: "Básica Slim Fit",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/3fd9/de20/7f134ddf8484/575002ad8c33/06224436800-a1/06224436800-a1.jpg",
-        color: "#F5F5DC",
-        link: "/produtos/7"
+        color: "#F5F5DC"
     },
     {
         id: 8,
         name: "Básica",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/da46/1eb1/c81a4f2fb010/fe6e9ea44f14/03665417251-000-a1/03665417251-000-a1.jpg?ts=1746777657706&w=1500",
-        color: "#000000",
-        link: "/produtos/8"
+        color: "#000000"
     },
     {
         id: 9,
         name: "Camisa",
         category: "Algodão",
-        price: "R$ 199",
+        price: 199,
         image: "https://static.zara.net/assets/public/da70/5cae/120e499e9931/fbcdd193e431/06462307800-a1/06462307800-a1.jpg?ts=1732117538502&w=1500",
-        color: "#2F4F4F",
-        link: "/produtos/9"
+        color: "#2F4F4F"
     },
 ];
 function Produtos() {
@@ -161,10 +151,10 @@ function Produtos() {
                 : __spreadArrays(prev, [filterId]);
         });
     };
-    return (React.createElement("div", null,
+    return (React.createElement("div", { className: "bg-[url('/assets/grain-texture.png')]" },
         React.createElement("div", { className: "flex min-h-screen" },
-            React.createElement("aside", { className: "fixed top-65 left-0 h-screen overflow-y-auto w-80 bg-white border-r border-gray-200 p-6 z-40" },
-                React.createElement("div", { className: "space-y-8" },
+            React.createElement("aside", { className: "w-64 md:w-72 lg:w-80 p-15 mt-30 h-screen overflow-y-auto border-gray-200" },
+                React.createElement("div", { className: "space-y-5" },
                     React.createElement("h2", { className: "text-2xl font-bold text-black" }, "Filtros"),
                     React.createElement("div", { className: "space-y-4" },
                         React.createElement("h3", { className: "text-lg font-semibold text-black" }, "Tamanho"),
@@ -222,7 +212,7 @@ function Produtos() {
                             React.createElement("h3", { className: "text-lg font-semibold text-black" }, "Avalia\u00E7\u00F5es"),
                             React.createElement("svg", { className: "w-5 h-5 transition-transform " + (expandedSections.avaliacoes ? "rotate-180" : "rotate-90"), fill: "none", stroke: "currentColor", viewBox: "0 0 24 24" },
                                 React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M9 5l7 7-7 7" })))))),
-            React.createElement("main", { className: "flex-1 p-8" },
+            React.createElement("main", { className: "flex-1 p-8 flex justify-center" },
                 React.createElement("div", { className: "max-w-6xl mx-auto" },
                     React.createElement("nav", { className: "text-sm text-gray-600 mb-6" },
                         React.createElement(react_router_1.NavLink, { to: "/", className: "hover:text-black" }, "In\u00EDcio"),
@@ -232,20 +222,23 @@ function Produtos() {
                     React.createElement("div", { className: "flex items-center gap-6 mb-12" },
                         React.createElement("div", { className: "flex-shrink-0" },
                             React.createElement("div", { className: "flex items-center bg-gray-200 rounded-sm h-12 w-80 px-4" },
-                                React.createElement("img", { src: search_svg_1["default"], alt: "Pesquisar", className: "h-5 w-5 mr-3 opacity-70" }),
+                                React.createElement("img", { src: "/assets/search.svg", alt: "Pesquisar", className: "h-5 w-5 mr-3 opacity-70" }),
                                 React.createElement("input", { type: "text", placeholder: "Pesquisar", value: searchTerm, onChange: function (e) { return setSearchTerm(e.target.value); }, className: "bg-transparent outline-none flex-1 text-gray-700 placeholder:text-gray-500" }))),
                         React.createElement("div", { className: "flex-1" },
                             React.createElement("div", { className: "grid grid-cols-2 md:grid-cols-5 lg:grid-cols-5 gap-4" }, categoryFilters.map(function (filter) { return (React.createElement("button", { key: filter.id, onClick: function () { return toggleFilter(filter.id); }, className: "px-4 py-3 border text-sm font-medium transition-colors " + (activeFilters.includes(filter.id)
                                     ? "border-black bg-black text-white"
                                     : "border-gray-300 text-gray-700 hover:border-gray-400") }, filter.label)); })))),
-                    React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" }, products.map(function (product) { return (React.createElement(react_router_1.NavLink, { key: product.id, to: product.link, className: "group block bg-gray-100 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300" },
-                        React.createElement("div", { className: "aspect-[3/4] bg-gray-100 overflow-hidden" },
+                    React.createElement("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-30" }, products.map(function (product) { return (React.createElement(react_router_1.NavLink, { key: product.id, to: "/produtos/" + product.id, className: "group block overflow-hidden hover:shadow-lg transition-shadow duration-300" },
+                        React.createElement("div", { className: "aspect-[3/4] overflow-hidden" },
                             React.createElement("img", { src: product.image, alt: product.name, className: "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" })),
                         React.createElement("div", { className: "p-4 space-y-2" },
-                            React.createElement("div", { className: "flex items-center justify-between" },
+                            React.createElement("div", { className: "flex items-center gap-x-2" },
                                 React.createElement("span", { className: "text-sm text-gray-500 font-medium" }, product.category),
-                                React.createElement("div", { className: "w-4 h-4 rounded-full border border-gray-300", style: { backgroundColor: product.color }, "aria-label": "Cor dispon\u00EDvel" })),
-                            React.createElement("h3", { className: "text-lg font-semibold text-black group-hover:text-gray-700 transition-colors" }, product.name),
-                            React.createElement("p", { className: "text-xl font-bold text-black" }, product.price)))); })))))));
+                                React.createElement("div", { className: "w-4 h-4 border border-gray-300", style: { backgroundColor: product.color }, "aria-label": "Cor dispon\u00EDvel" })),
+                            React.createElement("div", { className: "flex items-center justify-between" },
+                                React.createElement("h3", { className: "text-sm font-medium text-black group-hover:text-gray-700 transition-colors" }, product.name),
+                                React.createElement("p", null,
+                                    "R$ ",
+                                    product.price))))); })))))));
 }
 exports["default"] = Produtos;

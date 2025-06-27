@@ -1,24 +1,35 @@
 // src/components/Footer.tsx
 import { NavLink } from "react-router";
-import { useEffect, useState } from "react";
-import Logo from "../assets/logo.svg";
-import ToTopIcon from "../assets/to-top.svg";
+import { useEffect, useRef, useState } from "react";
+// import Logo from "../assets/logo.svg";
+// import ToTopIcon from "../assets/to-top.svg";
+// import grainTexture from "../assets/grain-texture.png";
 
 export default function Footer() {
   const [showScrollTop, setShowScrollTop] = useState(false);
+  const footerRef = useRef<HTMLElement | null>(null);
 
   // Controla a visibilidade do botão "voltar ao topo"
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setShowScrollTop(entry.isIntersecting);
+      },
+      {
+        root: null,
+        threshold: 0.2, // pode ajustar esse valor conforme necessário
+      }
+    );
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
       }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Função para voltar ao topo
@@ -30,12 +41,15 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative w-full bg-gray-50 border-t border-gray-200">
-      <div className="container mx-auto max-w-7xl px-20 py-16">
+    <footer
+      ref={footerRef}
+      className="relative w-full bg-[url(../assets/grain-texture.png)] border-t border-gray-200"
+    >
+      <div className="container mx-auto max-w-7xl px-20 mt-10 pb-5">
         {/* Logo centralizado */}
         <div className="flex justify-center mb-12">
           <NavLink to="/" className="flex items-center">
-            <img src={Logo} alt="Logo" className="h-12 w-auto" />
+            <img src="/assets/logo.svg" alt="Logo" className="h-12 w-auto" />
           </NavLink>
         </div>
 
@@ -68,7 +82,11 @@ export default function Footer() {
             className="fixed bottom-8 left-8 w-12 h-12 bg-white border border-gray-300 rounded-full flex items-center justify-center hover:bg-gray-50 transition-all duration-300 shadow-lg z-50"
             aria-label="Voltar ao topo"
           >
-            <img src={ToTopIcon} alt="Voltar ao topo" className="w-6 h-6" />
+            <img
+              src="/assets/to-top.svg"
+              alt="Voltar ao topo"
+              className="w-6 h-6"
+            />
           </button>
         )}
 
